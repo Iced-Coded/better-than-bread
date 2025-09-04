@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "farmersdelight:tree_bark"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  },
+  "result": [
+    {
+      "item": "betterthanbread:cinnamon",
+      "count": 1
+    }
+  ],
+  "sound": "farmersdelight:block.cutting_board.knife"
+}
