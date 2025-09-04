@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "betterthanbread:raw_cinnamon_roll_dough"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "betterthanbread:raw_cinnamon_roll",
+      "count": 3
+    }
+  ],
+  "sound": "farmersdelight:block.cutting_board.knife"
+}
