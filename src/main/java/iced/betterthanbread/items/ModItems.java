@@ -13,10 +13,12 @@ public class ModItems {
     //public static final Item FLOUR = registerItem("flour", new Item(new FabricItemSettings()));
     //public static final Item DOUGH = registerItem("dough", new Item(new FabricItemSettings().food(ModFoodComponent.DOUGH)));
     public static final Item CINNAMON = registerItem("cinnamon", new Item(new FabricItemSettings()));
+    public static final Item RAW_CINNAMON_ROLL_DOUGH = registerItem("raw_cinnamon_roll_dough", new Item(new FabricItemSettings().food(ModFoodComponent.RAW_CINNAMON_ROLL_DOUGH)));
 
     private static void addItemsToFoodsItemGroup(FabricItemGroupEntries entries) {
         //entries.add(FLOUR);
         entries.add(CINNAMON);
+        entries.add(RAW_CINNAMON_ROLL_DOUGH);
     }
 
     private static Item registerItem(String name, Item item) {
