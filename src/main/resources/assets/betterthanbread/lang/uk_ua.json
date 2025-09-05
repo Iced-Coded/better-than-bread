@@ -1,7 +1,8 @@
 {
-  "item.betterthanbread.cinnamon": "Cinnamon",
-  "item.betterthanbread.raw_cinnamon_roll_dough": "Raw Cinnamon Roll Dough",
-  "item.betterthanbread.raw_cinnamon_roll": "Raw Cinnamon Roll",
-  "item.betterthanbread.cinnamon_roll": "Cinnamon Roll",
-  "item.betterthanbread.glazed_cinnamon_roll": "Glazed Cinnamon Roll"
+  "item.betterthanbread.cinnamon": "Кориця",
+  "item.betterthanbread.raw_cinnamon_roll_dough": "Сире Тісто Тістечка з Корицею",
+  "item.betterthanbread.raw_cinnamon_roll": "Сире Тістечко з Корицею",
+  "item.betterthanbread.cinnamon_roll": "Тістечко з Корицею",
+  "item.betterthanbread.glazed_cinnamon_roll": "Сінабон",
+  "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
 }
