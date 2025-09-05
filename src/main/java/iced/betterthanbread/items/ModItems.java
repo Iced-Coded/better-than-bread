@@ -1,14 +1,16 @@
 package iced.betterthanbread.items;
-
-import io.wispforest.owo.itemgroup.OwoItemSettings;
 import iced.betterthanbread.BetterThanBread;
+
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import io.wispforest.owo.itemgroup.OwoItemSettings;
 import io.wispforest.owo.itemgroup.OwoItemGroup;
 import io.wispforest.owo.itemgroup.Icon;
+
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 
 public class ModItems {
     // For the mod's ItemGroup
@@ -55,5 +57,11 @@ public class ModItems {
 
     public static void registerModItems() {
         BetterThanBread.LOGGER.info("Registering Mod Items for " + BetterThanBread.MOD_ID);
+
+        CompostingChanceRegistry.INSTANCE.add(CINNAMON, 0.1f);
+        CompostingChanceRegistry.INSTANCE.add(RAW_CINNAMON_ROLL_DOUGH, 0.6f);
+        CompostingChanceRegistry.INSTANCE.add(RAW_CINNAMON_ROLL, 0.2f);
+        CompostingChanceRegistry.INSTANCE.add(CINNAMON_ROLL, 0.75f);
+        CompostingChanceRegistry.INSTANCE.add(GLAZED_CINNAMON_ROLL, 0.85f);
     }
 }
