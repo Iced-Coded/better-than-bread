@@ -4,5 +4,10 @@
   "item.betterthanbread.raw_cinnamon_roll": "Raw Cinnamon Roll",
   "item.betterthanbread.cinnamon_roll": "Cinnamon Roll",
   "item.betterthanbread.glazed_cinnamon_roll": "Glazed Cinnamon Roll",
+  "item.betterthanbread.beef_in_dough": "Beef in Dough",
+  "item.betterthanbread.sausage_in_dough": "Sausage in Dough",
+  "item.betterthanbread.raw_beef_in_dough": "Raw Beef in Dough",
+  "item.betterthanbread.raw_sausage_in_dough": "Raw Sausage in Dough",
+
   "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
 }
