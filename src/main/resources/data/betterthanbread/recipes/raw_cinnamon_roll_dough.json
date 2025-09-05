@@ -1,18 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "food",
-  "pattern": [
-    "DCC",
-    "   ",
-    "   "
-  ],
-  "key":{
-    "D": {
+  "ingredients": [
+    {
       "item": "farmersdelight:wheat_dough"
     },
-    "C": {
+    {
       "item": "betterthanbread:cinnamon"
+
+    },
+    {
+      "item": "betterthanbread:cinnamon"
+
+    },
+    {
+      "item": "minecraft:sugar"
     }
-  },
-  "result": "betterthanbread:raw_cinnamon_roll_dough"
+  ],
+  "result": {
+    "item": "betterthanbread:raw_cinnamon_roll_dough",
+    "count": 1
+  }
 }
