@@ -1,10 +1,8 @@
 package iced.betterthanbread.items;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.*;
+import io.wispforest.owo.itemgroup.OwoItemSettings;
 import iced.betterthanbread.BetterThanBread;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -13,37 +11,49 @@ import io.wispforest.owo.itemgroup.OwoItemGroup;
 import io.wispforest.owo.itemgroup.Icon;
 
 public class ModItems {
-    //public static final Item FLOUR = registerItem("flour", new Item(new FabricItemSettings()));
-    //public static final Item DOUGH = registerItem("dough", new Item(new FabricItemSettings().food(ModFoodComponent.DOUGH)));
-    public static final Item CINNAMON = registerItem("cinnamon", new Item(new FabricItemSettings()));
-    public static final Item RAW_CINNAMON_ROLL_DOUGH = registerItem("raw_cinnamon_roll_dough", new Item(new FabricItemSettings().food(ModFoodComponent.RAW_CINNAMON_ROLL_DOUGH)));
-    public static final Item RAW_CINNAMON_ROLL = registerItem("raw_cinnamon_roll", new Item(new FabricItemSettings().food(ModFoodComponent.RAW_CINNAMON_ROLL)));
-    public static final Item CINNAMON_ROLL = registerItem("cinnamon_roll", new Item(new FabricItemSettings().food(ModFoodComponent.CINNAMON_ROLL)));
-    public static final Item GLAZED_CINNAMON_ROLL = registerItem("glazed_cinnamon_roll", new Item(new FabricItemSettings().food(ModFoodComponent.GLAZED_CINNAMON_ROLL)));
-    public static final Item SAUSAGE_IN_DOUGH = registerItem("sausage_in_dough", new Item(new FabricItemSettings().food(ModFoodComponent.SAUSAGE_IN_DOUGH)));
-    public static final Item BEEF_IN_DOUGH = registerItem("beef_in_dough", new Item(new FabricItemSettings().food(ModFoodComponent.BEEF_IN_DOUGH)));
+    // For the mod's ItemGroup
+    public static final OwoItemGroup GROUP = OwoItemGroup
+            .builder(new Identifier(BetterThanBread.MOD_ID, "betterthanbread"), () -> Icon.of(itemGroupIcon()))
+            .build();
 
-    private static void addItemsToFoodsItemGroup(FabricItemGroupEntries entries) {
-        //entries.add(FLOUR);
-        entries.add(CINNAMON);
-        entries.add(RAW_CINNAMON_ROLL_DOUGH);
-        entries.add(RAW_CINNAMON_ROLL);
-        entries.add(CINNAMON_ROLL);
-        entries.add(GLAZED_CINNAMON_ROLL);
+    // Lazily load the cinnamon texture
+    private static Item itemGroupIcon() {
+        return CINNAMON;
     }
+
+    public static final Item CINNAMON = registerItem("cinnamon", new Item(new OwoItemSettings()
+            .group(ModItems.GROUP)
+    ));
+    public static final Item RAW_CINNAMON_ROLL_DOUGH = registerItem("raw_cinnamon_roll_dough", new Item(new OwoItemSettings()
+            .food(ModFoodComponent.RAW_CINNAMON_ROLL_DOUGH)
+            .group(ModItems.GROUP)
+    ));
+    public static final Item RAW_CINNAMON_ROLL = registerItem("raw_cinnamon_roll", new Item(new OwoItemSettings()
+            .food(ModFoodComponent.RAW_CINNAMON_ROLL)
+            .group(ModItems.GROUP)
+    ));
+    public static final Item CINNAMON_ROLL = registerItem("cinnamon_roll", new Item(new OwoItemSettings()
+            .food(ModFoodComponent.CINNAMON_ROLL)
+            .group(ModItems.GROUP)
+    ));
+    public static final Item GLAZED_CINNAMON_ROLL = registerItem("glazed_cinnamon_roll", new Item(new OwoItemSettings()
+            .food(ModFoodComponent.GLAZED_CINNAMON_ROLL)
+            .group(ModItems.GROUP)
+    ));
+    public static final Item SAUSAGE_IN_DOUGH = registerItem("sausage_in_dough", new Item(new OwoItemSettings()
+            .food(ModFoodComponent.SAUSAGE_IN_DOUGH)
+            .group(ModItems.GROUP)
+    ));
+    public static final Item BEEF_IN_DOUGH = registerItem("beef_in_dough", new Item(new OwoItemSettings()
+            .food(ModFoodComponent.BEEF_IN_DOUGH)
+            .group(ModItems.GROUP)
+    ));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BetterThanBread.MOD_ID, name), item);
     }
 
-    public static final OwoItemGroup GROUP = OwoItemGroup
-            .builder(new Identifier(BetterThanBread.MOD_ID, "betterthanbread"), () -> Icon.of(CINNAMON))
-            .build();
-
     public static void registerModItems() {
         BetterThanBread.LOGGER.info("Registering Mod Items for " + BetterThanBread.MOD_ID);
-
-
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodsItemGroup);
     }
 }
