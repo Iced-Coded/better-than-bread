@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "betterthanbread:item/glazed_cinnamon_roll"
+  }
+}
