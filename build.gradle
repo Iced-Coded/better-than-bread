@@ -11,24 +11,39 @@ base {
 }
 
 repositories {
+    maven { url 'https://maven.wispforest.io/releases/' }
+
     maven {
         name = "Greenhouse Maven"
         url = "https://repo.greenhouse.house/releases/"
+        content {
+            includeGroup "vectorwing"
+        }
     }
+
+    maven {
+        name = "Greenhouse Mirror"
+        url = "https://maven.greenhouse.lgbt/releases/"
+        content {
+            includeGroup "vectorwing"
+        }
+    }
+
     maven { url "https://mvn.devos.one/releases/" }
+
     maven {
         url "https://maven.jamieswhiteshirt.com/libs-release"
         content {
             includeGroup "com.jamieswhiteshirt"
         }
     }
+
     maven {
         url "https://jitpack.io/"
         content {
             excludeGroup "io.github.fabricators_of_create"
         }
     }
-    maven { url 'https://maven.wispforest.io/releases/' }
 }
 
 fabricApi {
@@ -48,7 +63,7 @@ dependencies {
 
     // Farmer's Delight Refabricated
     modImplementation("vectorwing:FarmersDelight:${project.fdrf_version}") {
-        exclude(group: "net.fabricmc")
+         exclude(group:"new.fabricmc")
     }
 
     // owo-lib
