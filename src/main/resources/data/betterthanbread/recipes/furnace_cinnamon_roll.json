@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "betterthanbread:raw_cinnamon_roll"
+  },
+  "result": "betterthanbread:cinnamon_roll",
+  "experience": 5,
+  "cookingTime": 200
+}
