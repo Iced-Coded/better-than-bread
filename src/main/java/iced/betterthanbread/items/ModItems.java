@@ -9,6 +9,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import io.wispforest.owo.itemgroup.OwoItemGroup;
+import io.wispforest.owo.itemgroup.Icon;
+
 public class ModItems {
     //public static final Item FLOUR = registerItem("flour", new Item(new FabricItemSettings()));
     //public static final Item DOUGH = registerItem("dough", new Item(new FabricItemSettings().food(ModFoodComponent.DOUGH)));
@@ -17,6 +20,8 @@ public class ModItems {
     public static final Item RAW_CINNAMON_ROLL = registerItem("raw_cinnamon_roll", new Item(new FabricItemSettings().food(ModFoodComponent.RAW_CINNAMON_ROLL)));
     public static final Item CINNAMON_ROLL = registerItem("cinnamon_roll", new Item(new FabricItemSettings().food(ModFoodComponent.CINNAMON_ROLL)));
     public static final Item GLAZED_CINNAMON_ROLL = registerItem("glazed_cinnamon_roll", new Item(new FabricItemSettings().food(ModFoodComponent.GLAZED_CINNAMON_ROLL)));
+    public static final Item SAUSAGE_IN_DOUGH = registerItem("sausage_in_dough", new Item(new FabricItemSettings().food(ModFoodComponent.SAUSAGE_IN_DOUGH)));
+    public static final Item BEEF_IN_DOUGH = registerItem("beef_in_dough", new Item(new FabricItemSettings().food(ModFoodComponent.BEEF_IN_DOUGH)));
 
     private static void addItemsToFoodsItemGroup(FabricItemGroupEntries entries) {
         //entries.add(FLOUR);
@@ -31,9 +36,14 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(BetterThanBread.MOD_ID, name), item);
     }
 
+    public static final OwoItemGroup GROUP = OwoItemGroup
+            .builder(new Identifier(BetterThanBread.MOD_ID, "betterthanbread"), () -> Icon.of(CINNAMON))
+            .build();
+
     public static void registerModItems() {
         BetterThanBread.LOGGER.info("Registering Mod Items for " + BetterThanBread.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodsItemGroup);
+
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodsItemGroup);
     }
 }

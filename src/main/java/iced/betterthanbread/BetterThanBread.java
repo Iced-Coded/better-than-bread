@@ -22,6 +22,7 @@ public class BetterThanBread implements ModInitializer {
 		// Proceed with mild caution.
         ModItems.registerModItems();
 
-		LOGGER.info("Hello Fabric world!");
+        ModItems.GROUP.initialize();
+        LOGGER.info("Hello Fabric world!");
 	}
 }
