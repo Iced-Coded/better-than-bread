@@ -1,9 +1,13 @@
 {
   "item.betterthanbread.cinnamon": "Cinnamon",
+  "item.betterthanbread.sausage": "Sausage",
+  "item.betterthanbread.raw_sausage": "Raw Sausage",
+
   "item.betterthanbread.raw_cinnamon_roll_dough": "Raw Cinnamon Roll Dough",
   "item.betterthanbread.raw_cinnamon_roll": "Raw Cinnamon Roll",
   "item.betterthanbread.cinnamon_roll": "Cinnamon Roll",
   "item.betterthanbread.glazed_cinnamon_roll": "Glazed Cinnamon Roll",
+
   "item.betterthanbread.beef_in_dough": "Beef in Dough",
   "item.betterthanbread.sausage_in_dough": "Sausage in Dough",
   "item.betterthanbread.raw_beef_in_dough": "Raw Beef in Dough",

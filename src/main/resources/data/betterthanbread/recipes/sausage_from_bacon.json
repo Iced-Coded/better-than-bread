@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "farmersdelight:bacon"
+    },
+    {
+      "item": "farmersdelight:bacon"
+
+    }
+  ],
+  "result": {
+    "item": "betterthanbread:raw_sausage",
+    "count": 1
+  }
+}
