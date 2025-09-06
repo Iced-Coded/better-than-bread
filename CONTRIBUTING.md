@@ -1,4 +1,4 @@
-# Contributing to CONTRIBUTING.md
+# Contributing to Iced-Coded/better-than-bread
 
 First off, thanks for contributing or planning to contribute!
 
