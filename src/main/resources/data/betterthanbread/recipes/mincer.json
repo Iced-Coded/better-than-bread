@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    "LBF",
+    " I "
+  ],
+  "key": {
+    "F": {
+      "tag": "minecraft:funnel"
+    },
+    "B": {
+      "tag": "betterthanbread:blade"
+    },
+    "L": {
+      "tag": "minecraft:lever"
+    },
+    "I": {
+      "tag": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "id": "betterthanbread:mincer",
+    "count": 1
+  }
+}
