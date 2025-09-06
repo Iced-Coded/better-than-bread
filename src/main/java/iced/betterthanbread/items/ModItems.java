@@ -25,16 +25,18 @@ public class ModItems {
     }
 
     public static final Item CINNAMON = simpleItem("cinnamon", 0.1f);
+    public static final Item SAUSAGE = foodItem("sausage", ModFoodComponent.SAUSAGE, 0.45f);
+    public static final Item RAW_SAUSAGE = foodItem("raw_sausage", ModFoodComponent.RAW_SAUSAGE, 0.35f);
+
     public static final Item RAW_CINNAMON_ROLL_DOUGH = foodItem("raw_cinnamon_roll_dough", ModFoodComponent.RAW_CINNAMON_ROLL_DOUGH, 0.3f);
     public static final Item RAW_CINNAMON_ROLL = foodItem("raw_cinnamon_roll", ModFoodComponent.RAW_CINNAMON_ROLL, 0.3f);
     public static final Item CINNAMON_ROLL = foodItem("cinnamon_roll", ModFoodComponent.CINNAMON_ROLL, 0.45f);
     public static final Item GLAZED_CINNAMON_ROLL = foodItem("glazed_cinnamon_roll", ModFoodComponent.GLAZED_CINNAMON_ROLL, 0.5f);
+
     public static final Item SAUSAGE_IN_DOUGH = foodItem("sausage_in_dough", ModFoodComponent.MEAT_IN_DOUGH, 0.5f);
     public static final Item BEEF_IN_DOUGH = foodItem("beef_in_dough", ModFoodComponent.MEAT_IN_DOUGH, 0.5f);
     public static final Item RAW_SAUSAGE_IN_DOUGH = foodItem("raw_sausage_in_dough", ModFoodComponent.RAW_MEAT_IN_DOUGH, 0.35f);
     public static final Item RAW_BEEF_IN_DOUGH = foodItem("raw_beef_in_dough", ModFoodComponent.RAW_MEAT_IN_DOUGH, 0.35f);
-    public static final Item SAUSAGE = foodItem("sausage", ModFoodComponent.SAUSAGE, 0.45f);
-    public static final Item RAW_SAUSAGE = foodItem("raw_sausage", ModFoodComponent.RAW_SAUSAGE, 0.35f);
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BetterThanBread.MOD_ID, name), item);
