@@ -9,5 +9,8 @@
   "item.betterthanbread.raw_beef_in_dough": "Surová Kotleta v Těstíčku",
   "item.betterthanbread.raw_sausage_in_dough": "Surová Klobása v Těstičku",
 
-  "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
+  "itemGroup.betterthanbread.betterthanbread": "Better than Bread",
+  "item.betterthanbread.sausage": "Klobása",
+  "item.betterthanbread.raw_sausage": "Surová Klobása",
+  "item.betterthanbread.blade": "Blade"
 }
