@@ -1,5 +1,8 @@
 package iced.betterthanbread;
 
+import iced.betterthanbread.blocks.ModBlockEntities;
+import iced.betterthanbread.blocks.ModBlocks;
+import io.wispforest.owo.Owo;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,8 +24,9 @@ public class BetterThanBread implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
         ModItems.registerModItems();
-
         ModItems.GROUP.initialize();
+        ModBlocks.registerModBlocks();
+        ModBlockEntities.registerModBlockEntities();
         LOGGER.info("Hello Fabric world!");
 	}
 }
