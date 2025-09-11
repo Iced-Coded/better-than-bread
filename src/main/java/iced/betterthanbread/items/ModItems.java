@@ -1,6 +1,7 @@
 package iced.betterthanbread.items;
 import iced.betterthanbread.BetterThanBread;
 
+import iced.betterthanbread.items.custom.RollingPinItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -33,7 +34,12 @@ public class ModItems {
     public static final Item CINNAMON_ROLL = foodItem("cinnamon_roll", ModFoodComponent.CINNAMON_ROLL, 0.45f);
     public static final Item GLAZED_CINNAMON_ROLL = foodItem("glazed_cinnamon_roll", ModFoodComponent.GLAZED_CINNAMON_ROLL, 0.5f);
 
-    public static final Item ROLLING_PIN = simpleItem("rolling_pin", 0);
+    public static final Item ROLLING_PIN = registerItem("rolling_pin",
+            new RollingPinItem(new OwoItemSettings()
+                    .group(ModItems.GROUP)
+                    .maxCount(1)
+                    .maxDamage(64)
+            ));
 
     public static final Item BUTTER = foodItem("butter", ModFoodComponent.BUTTER, 0.1f);
 
