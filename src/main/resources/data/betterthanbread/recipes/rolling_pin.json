@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "SPS",
+    "   "
+  ],
+  "key": {
+    "S": { "item": "minecraft:stick" },
+    "P": { "tag": "minecraft:planks" }
+  },
+  "result": {
+    "item": "betterthanbread:rolling_pin",
+    "count": 1
+  }
+}
+w
