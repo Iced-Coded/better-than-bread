@@ -14,6 +14,8 @@
   "item.betterthanbread.butter_churn": "Butter Churn",
   "block.betterthanbread.butter_churn": "Butter Churn",
   "item.betterthanbread.butter": "Butter",
+  "item.betterthanbread.croissant": "Croissant",
+  "item.betterthanbread.raw_croissant": "Raw Croissant",
 
   "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
 }
