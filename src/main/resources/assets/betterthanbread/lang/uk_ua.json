@@ -6,5 +6,12 @@
   "item.betterthanbread.raw_cinnamon_roll": "Сире Тістечко з Корицею",
   "item.betterthanbread.cinnamon_roll": "Тістечко з Корицею",
   "item.betterthanbread.glazed_cinnamon_roll": "Сінабон",
+  "item.betterthanbread.blade": "Лезо",
+  "item.betterthanbread.rolling_pin": "Качалка",
+  "item.betterthanbread.butter_churn": "Масничка",
+  "block.betterthanbread.butter_churn": "Масничка",
+  "item.betterthanbread.butter": "Масло",
+  "item.betterthanbread.croissant": "Круасан",
+  "item.betterthanbread.raw_croissant": "Сирий Круасан",
   "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
 }
