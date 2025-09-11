@@ -15,5 +15,8 @@
 
   "item.betterthanbread.blade": "Blade",
 
+  "item.betterthanbread.butter_churn": "Butter Churn",
+  "block.betterthanbread.butter_churn": "Butter Churn",
+
   "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
 }
