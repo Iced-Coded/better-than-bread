@@ -14,7 +14,9 @@ public class RollingPinItem extends Item {
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
         ItemStack copy = stack.copy();
-        copy.damage(1, null, e -> {});
+
+        copy.setDamage(copy.getDamage() + 1);
+
         if (copy.getDamage() >= copy.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
