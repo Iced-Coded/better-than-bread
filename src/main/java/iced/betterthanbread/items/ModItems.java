@@ -41,6 +41,9 @@ public class ModItems {
                     .maxDamage(64)
             ));
 
+    public static final Item RAW_CROISSANT = foodItem("raw_croissant", ModFoodComponent.RAW_CROISSANT, 0.25f);
+    public static final Item CROISSANT = foodItem("croissant", ModFoodComponent.CROISSANT, 0.4f);
+
     public static final Item BUTTER = foodItem("butter", ModFoodComponent.BUTTER, 0.1f);
 
     //public static final Item SAUSAGE_IN_DOUGH = foodItem("sausage_in_dough", ModFoodComponent.MEAT_IN_DOUGH, 0.5f);

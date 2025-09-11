@@ -24,14 +24,12 @@ public class ModFoodComponent {
 
     public static FoodComponent CINNAMON_ROLL = new FoodComponent.Builder()
             .hunger(4)
-            .saturationModifier(0.70f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 300), 1)
+            .saturationModifier(0.5f)
             .build();
 
     public static FoodComponent GLAZED_CINNAMON_ROLL = new FoodComponent.Builder()
             .hunger(5)
-            .saturationModifier(0.75f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 300), 1)
+            .saturationModifier(0.55f)
             .build();
 
     public static FoodComponent BUTTER = new FoodComponent.Builder()
@@ -49,5 +47,17 @@ public class ModFoodComponent {
             .saturationModifier(0.25f)
             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600), 1)
             .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 600), 1)
+            .build();
+
+    public static FoodComponent RAW_CROISSANT = new FoodComponent.Builder()
+            .hunger(1)
+            .saturationModifier(0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600), 1)
+            .alwaysEdible()
+            .build();
+
+    public static FoodComponent CROISSANT = new FoodComponent.Builder()
+            .hunger(5)
+            .saturationModifier(0.5f)
             .build();
 }
