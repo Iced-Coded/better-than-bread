@@ -18,9 +18,15 @@
 		"main": [
 			"iced.betterthanbread.BetterThanBread"
 		],
+        "client": [
+            "iced.betterthanbread.BetterThanBreadClient"
+        ],
 		"fabric-datagen": [
 			"iced.betterthanbread.BetterThanBreadDataGenerator"
-		]
+		],
+        "owo": [
+            "iced.betterthanbread.BetterThanBread"
+        ]
 	},
 	"mixins": [
 		"betterthanbread.mixins.json"
