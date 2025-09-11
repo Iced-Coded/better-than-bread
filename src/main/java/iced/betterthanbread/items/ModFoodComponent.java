@@ -34,16 +34,20 @@ public class ModFoodComponent {
             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 300), 1)
             .build();
 
-    // TODO: make sausage in dough and a beef in dough
-    public static FoodComponent MEAT_IN_DOUGH = new FoodComponent.Builder()
-            .hunger(5)
-            .saturationModifier(0.75f)
-            .build();
+    //public static FoodComponent MEAT_IN_DOUGH = new FoodComponent.Builder()
+            //.hunger(5)
+            //.saturationModifier(0.75f)
+            //.build();
 
-    public static FoodComponent RAW_MEAT_IN_DOUGH = new FoodComponent.Builder()
-            .hunger(2)
-            .saturationModifier(0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600), 1)
+    //public static FoodComponent RAW_MEAT_IN_DOUGH = new FoodComponent.Builder()
+            //.hunger(2)
+            //.saturationModifier(0.25f)
+            //.statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600), 1)
+            //.build();
+
+    public static FoodComponent BUTTER = new FoodComponent.Builder()
+            .hunger(1)
+            .saturationModifier(0.5f)
             .build();
 
     public static FoodComponent SAUSAGE = new FoodComponent.Builder()
