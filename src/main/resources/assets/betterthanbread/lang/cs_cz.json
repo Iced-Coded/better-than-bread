@@ -1,12 +1,17 @@
 {
   "item.betterthanbread.cinnamon": "Skořice",
+  "item.betterthanbread.sausage": "Klobása",
+  "item.betterthanbread.raw_sausage": "Surová Klobása",
   "item.betterthanbread.raw_cinnamon_roll_dough": "Surově Těsto na Skořicově Rohličky",
   "item.betterthanbread.raw_cinnamon_roll": "Surová Skořicová Rolka",
   "item.betterthanbread.cinnamon_roll": "Skořicový Rolka",
   "item.betterthanbread.glazed_cinnamon_roll": "Glazovaná Skořicová Rolka",
-
-  "itemGroup.betterthanbread.betterthanbread": "Better than Bread",
-  "item.betterthanbread.sausage": "Klobása",
-  "item.betterthanbread.raw_sausage": "Surová Klobása",
-  "item.betterthanbread.blade": "Blade"
+  "item.betterthanbread.blade": "Čepel",
+  "item.betterthanbread.rolling_pin": "Váleček",
+  "item.betterthanbread.butter_churn": "Máselnice",
+  "block.betterthanbread.butter_churn": "Máselnice",
+  "item.betterthanbread.butter": "Máslo",
+  "item.betterthanbread.croissant": "Croissant",
+  "item.betterthanbread.raw_croissant": "Surový Сroissant",
+  "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
 }
