@@ -12,7 +12,7 @@ public class ModBlockEntities {
     public static void registerModBlockEntities() {
         BUTTER_CHURN = Registry.register(
                 Registries.BLOCK_ENTITY_TYPE,
-                new Identifier("betterthanbread", "butter_churn"),
+                Identifier.of("betterthanbread", "butter_churn"),
                 BlockEntityType.Builder.create(ButterChurnBlockEntity::new, ModBlocks.BUTTER_CHURN).build(null)
         );
     }

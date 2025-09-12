@@ -27,8 +27,8 @@ import net.minecraft.util.math.RotationAxis;
 
 @Environment(EnvType.CLIENT)
 public class BetterThanBreadClient implements ClientModInitializer {
-    public static final EntityModelLayer BUTTER_CHURN_LAYER = new EntityModelLayer(new Identifier("betterthanbread", "butter_churn"), "main");
-    public static final Identifier BUTTER_CHURN_TEXTURE = new Identifier("betterthanbread", "textures/entity/butter_churn.png");
+    public static final EntityModelLayer BUTTER_CHURN_LAYER = new EntityModelLayer(Identifier.of("betterthanbread", "butter_churn"), "main");
+    public static final Identifier BUTTER_CHURN_TEXTURE = Identifier.of("betterthanbread", "textures/entity/butter_churn.png");
 
     @Override
     public void onInitializeClient() {
@@ -36,7 +36,7 @@ public class BetterThanBreadClient implements ClientModInitializer {
                 .registerReloadListener(new SimpleSynchronousResourceReloadListener() {
                     @Override
                     public Identifier getFabricId() {
-                        return new Identifier("betterthanbread", "item_renderer_reload");
+                        return Identifier.of("betterthanbread", "item_renderer_reload");
                     }
 
                     @Override
@@ -88,7 +88,7 @@ public class BetterThanBreadClient implements ClientModInitializer {
                             RenderLayer.getEntityCutoutNoCull(BUTTER_CHURN_TEXTURE)
                     );
 
-                    model.render(matrices, vc, light, overlay, 1, 1, 1, 1);
+                    model.render(matrices, vc, light, overlay);
 
                     matrices.pop();
 

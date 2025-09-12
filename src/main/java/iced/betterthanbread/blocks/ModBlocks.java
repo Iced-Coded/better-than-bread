@@ -28,7 +28,7 @@ public class ModBlocks {
     );
 
     public static void registerModBlocks() {
-        Registry.register(Registries.BLOCK, new Identifier(BetterThanBread.MOD_ID, "butter_churn"), BUTTER_CHURN);
-        Registry.register(Registries.ITEM, new Identifier(BetterThanBread.MOD_ID, "butter_churn"), BUTTER_CHURN_ITEM);
+        Registry.register(Registries.BLOCK, Identifier.of(BetterThanBread.MOD_ID, "butter_churn"), BUTTER_CHURN);
+        Registry.register(Registries.ITEM, Identifier.of(BetterThanBread.MOD_ID, "butter_churn"), BUTTER_CHURN_ITEM);
     }
 }

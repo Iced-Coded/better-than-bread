@@ -31,11 +31,11 @@ public class ButterChurnRenderer implements BlockEntityRenderer<ButterChurnBlock
         int blockLight = WorldRenderer.getLightmapCoordinates(entity.getWorld(), entity.getPos());
 
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(
-                RenderLayer.getEntityCutoutNoCull(this.getTexture())
+                RenderLayer.getEntitySolid(this.getTexture())
         );
 
         try {
-            this.model.render(matrices, vertexConsumer, blockLight, overlay, 1.0f, 1.0f, 1.0f, 1.0f);
+            this.model.render(matrices, vertexConsumer, blockLight, overlay);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,14 +53,14 @@ public class ButterChurnRenderer implements BlockEntityRenderer<ButterChurnBlock
                 if (i == 1) {
 
                 }
-                return new Identifier("betterthanbread", "textures/entity/butter_churn.png");
+                return Identifier.of("betterthanbread", "textures/entity/butter_churn.png");
             } else {
                 System.out.println("Texture NOT found in resources");
-                return new Identifier("minecraft", "textures/block/oak_planks.png");
+                return Identifier.of("minecraft", "textures/block/oak_planks.png");
             }
         } catch (IOException e) {
             e.printStackTrace();
-            return new Identifier("minecraft", "textures/block/oak_planks.png");
+            return Identifier.of("minecraft", "textures/block/oak_planks.png");
         }
     }
 }

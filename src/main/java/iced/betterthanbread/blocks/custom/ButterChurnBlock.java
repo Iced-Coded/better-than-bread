@@ -19,7 +19,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class ButterChurnBlock extends Block implements BlockEntityProvider {
+public class ButterChurnBlock extends Block {
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(3.0, 0.0, 3.0, 13.0, 13.0, 13.0);
 
@@ -27,7 +27,6 @@ public class ButterChurnBlock extends Block implements BlockEntityProvider {
         super(settings);
     }
 
-    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos,
                               PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.isClient) return ActionResult.SUCCESS;
@@ -60,7 +59,6 @@ public class ButterChurnBlock extends Block implements BlockEntityProvider {
     }
 
     @Nullable
-    @Override
     public ButterChurnBlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new ButterChurnBlockEntity(pos, state);
     }

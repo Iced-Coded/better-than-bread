@@ -2,7 +2,7 @@ package iced.betterthanbread.items;
 import iced.betterthanbread.BetterThanBread;
 
 import iced.betterthanbread.items.custom.RollingPinItem;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -17,7 +17,7 @@ import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 public class ModItems {
     // For the mod's ItemGroup
     public static final OwoItemGroup GROUP = OwoItemGroup
-            .builder(new Identifier(BetterThanBread.MOD_ID, "betterthanbread"), () -> Icon.of(itemGroupIcon()))
+            .builder(Identifier.of(BetterThanBread.MOD_ID, "betterthanbread"), () -> Icon.of(itemGroupIcon()))
             .build();
 
     // Lazily load the cinnamon texture
@@ -55,7 +55,7 @@ public class ModItems {
     public static final Item BLADE = simpleItem("blade", 0);
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(BetterThanBread.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(BetterThanBread.MOD_ID, name), item);
     }
 
     private static Item foodItem(String name, FoodComponent food, float composting) {
