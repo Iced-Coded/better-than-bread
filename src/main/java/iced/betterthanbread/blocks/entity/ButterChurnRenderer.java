@@ -31,7 +31,7 @@ public class ButterChurnRenderer implements BlockEntityRenderer<ButterChurnBlock
         int blockLight = WorldRenderer.getLightmapCoordinates(entity.getWorld(), entity.getPos());
 
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(
-                RenderLayer.getEntitySolid(this.getTexture())
+                RenderLayer.getEntityCutoutNoCull(this.getTexture())
         );
 
         try {

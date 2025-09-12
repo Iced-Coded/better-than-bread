@@ -3,7 +3,10 @@ package iced.betterthanbread.blocks.entity;
 import iced.betterthanbread.blocks.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.component.type.NbtComponent;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.sound.SoundCategory;
@@ -28,11 +31,13 @@ public class ButterChurnBlockEntity extends BlockEntity {
                     null,
                     pos,
                     SoundEvents.ITEM_BUCKET_EMPTY,
-                    SoundCategory.BLOCKS
+                    SoundCategory.BLOCKS,
+                    1.0f,
+                    1.0f
             );
         }
 
-        markDirty();
+        syncAndDirty();
     }
 
     public void churn() {
@@ -62,7 +67,7 @@ public class ButterChurnBlockEntity extends BlockEntity {
                 );
             }
 
-            markDirty();
+            syncAndDirty();
         }
     }
 
@@ -87,6 +92,32 @@ public class ButterChurnBlockEntity extends BlockEntity {
             );
         }
 
+        syncAndDirty();
+    }
+
+    private void syncAndDirty() {
         markDirty();
+
+        if (world != null && !world.isClient) {
+            world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+
+            if (world instanceof ServerWorld serverWorld) {
+                serverWorld.getChunkManager().markForUpdate(pos);
+            }
+        }
+    }
+
+    @Override
+    public void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
+        super.writeNbt(nbt, registries);
+        nbt.putBoolean("HasMilk", hasMilk);
+        nbt.putInt("ChurnProgress", churnProgress);
+    }
+
+    @Override
+    public void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
+        super.readNbt(nbt, registries);
+        this.hasMilk = nbt.getBoolean("HasMilk");
+        this.churnProgress = nbt.getInt("ChurnProgress");
     }
 }
