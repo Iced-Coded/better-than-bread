@@ -14,15 +14,7 @@ repositories {
     maven { url 'https://maven.wispforest.io/releases/' }
 
     maven {
-        name = "Greenhouse Maven"
-        url = "https://repo.greenhouse.house/releases/"
-        content {
-            includeGroup "vectorwing"
-        }
-    }
-
-    maven {
-        name = "Greenhouse Mirror"
+        name = "Greenhouse"
         url = "https://maven.greenhouse.lgbt/releases/"
         content {
             includeGroup "vectorwing"
