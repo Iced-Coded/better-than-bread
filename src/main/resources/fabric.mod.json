@@ -33,11 +33,11 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.17.2",
-		"minecraft": ">=1.20 <1.21",
+		"minecraft": "1.21.1",
 		"java": ">=17",
 		"fabric-api": "*",
         "farmersdelight": ">=1.20.1-2.0.7+refabricated",
-        "owo-lib": "0.11.2+1.20"
+        "owo-lib": ">=0.11.2+1.20"
 	},
 	"suggests": {
 		"another-mod": "*"
