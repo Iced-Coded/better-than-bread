@@ -14,6 +14,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static iced.betterthanbread.BetterThanBread.MOD_ID;
+
 public class ModBlocks {
     public static final Block BUTTER_CHURN = new ButterChurnBlock(
             FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque()
@@ -27,8 +29,21 @@ public class ModBlocks {
                     .maxCount(1)           // limit stack size to 1
     );
 
+    public static final Block PORK_PIE = new PorkpieBlock(
+            FabricBlockSettings.copyOf(Blocks.CAKE).nonOpaque()
+    );
+
+    public static final Item PORK_PIE_ITEM = new BlockItem(
+            PORK_PIE,
+            new OwoItemSettings()
+                    .group(ModItems.GROUP)
+                    .maxCount(1)
+    );
+
     public static void registerModBlocks() {
-        Registry.register(Registries.BLOCK, new Identifier(BetterThanBread.MOD_ID, "butter_churn"), BUTTER_CHURN);
-        Registry.register(Registries.ITEM, new Identifier(BetterThanBread.MOD_ID, "butter_churn"), BUTTER_CHURN_ITEM);
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "butter_churn"), BUTTER_CHURN);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "butter_churn"), BUTTER_CHURN_ITEM);
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pork_pie"), PORK_PIE);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pork_pie"), PORK_PIE_ITEM);
     }
 }
