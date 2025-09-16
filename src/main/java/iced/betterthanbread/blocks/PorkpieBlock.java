@@ -16,14 +16,16 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 public class PorkpieBlock extends Block {
-    public static final int MAX_BITES = 4;
+    public static final int MAX_BITES = 6;
     public static final IntProperty BITES = IntProperty.of("bites", 0, MAX_BITES);
     private static final VoxelShape[] BITES_TO_SHAPE = new VoxelShape[] {
             Block.createCuboidShape(1, 0, 1, 15, 8, 15),
             Block.createCuboidShape(3, 0, 1, 15, 8, 15),
             Block.createCuboidShape(5, 0, 1, 15, 8, 15),
             Block.createCuboidShape(7, 0, 1, 15, 8, 15),
-            Block.createCuboidShape(0, 0, 0, 16, 2, 16)
+            Block.createCuboidShape(9, 0, 1, 15, 8, 15),
+            Block.createCuboidShape(11, 0, 1, 15, 8, 15),
+            Block.createCuboidShape(13, 0, 1, 15, 8, 15)
     };
 
     public PorkpieBlock(Settings settings) {

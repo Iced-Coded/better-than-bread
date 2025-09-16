@@ -1,0 +1,27 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "cake",
+	"texture_size": [32, 32],
+	"textures": {
+      "top": "betterthanbread:block/pork_pie_top",
+      "side": "betterthanbread:block/pork_pie_side",
+      "bottom": "betterthanbread:block/pork_pie_bottom",
+      "inside": "betterthanbread:block/pork_pie_inside",
+      "particle": "betterthanbread:block/pork_pie_bottom"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 1],
+			"to": [15, 8, 15],
+			"faces": {
+				"north": {"uv": [7, 0, 12, 4], "texture": "#side", "cullface": "north"},
+				"east": {"uv": [7, 0, 14, 4], "texture": "#side", "cullface": "east"},
+				"south": {"uv": [9, 0, 14, 4], "texture": "#side", "cullface": "south"},
+				"west": {"uv": [7, 0, 14, 4], "texture": "#inside", "cullface": "west"},
+				"up": {"uv": [5, 7, 0, 0], "texture": "#top"},
+				"down": {"uv": [10, 0, 0, 14], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	]
+}
