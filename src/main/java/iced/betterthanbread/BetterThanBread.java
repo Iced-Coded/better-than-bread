@@ -2,9 +2,16 @@ package iced.betterthanbread;
 
 import iced.betterthanbread.blocks.ModBlockEntities;
 import iced.betterthanbread.blocks.ModBlocks;
+import iced.betterthanbread.recipes.ButterChurnRecipe;
 import io.wispforest.owo.Owo;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.RecipeType;
+import net.minecraft.recipe.SpecialRecipeSerializer;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +24,14 @@ public class BetterThanBread implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    public static final RecipeType<ButterChurnRecipe> BUTTER_CHURN = RecipeType.register("betterthanbread:butter_churn");
+
+    public static final RecipeSerializer<ButterChurnRecipe> BUTTER_CHURN_SERIALIZER = Registry.register(
+            Registries.RECIPE_SERIALIZER,
+            new Identifier(MOD_ID, "butter_churn"),
+            new ButterChurnRecipe.Serializer()
+    );
 
 	@Override
 	public void onInitialize() {

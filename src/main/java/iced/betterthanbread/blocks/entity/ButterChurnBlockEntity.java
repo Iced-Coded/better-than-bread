@@ -3,10 +3,12 @@ package iced.betterthanbread.blocks.entity;
 import iced.betterthanbread.blocks.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraft.server.world.ServerWorld;
 
@@ -14,13 +16,30 @@ public class ButterChurnBlockEntity extends BlockEntity {
     private boolean hasMilk = false;
     private int churnProgress = 0;
     private final int churnNeeded = 5;
+    private Item inputItem = Items.AIR; // Track the input item
 
     public ButterChurnBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.BUTTER_CHURN, pos, state);
     }
 
+    public boolean hasInput() {
+        return this.hasMilk();
+    }
+
+    public void insertInput(Item item) {
+        if (item == Items.MILK_BUCKET) {
+            insertMilk();
+        }
+        // You can add support for other input items here later
+    }
+
+    public Item getInputItem() {
+        return inputItem;
+    }
+
     public void insertMilk() {
         hasMilk = true;
+        inputItem = Items.MILK_BUCKET; // Set the input item
         churnProgress = 0;
 
         if (world != null) {
@@ -76,6 +95,7 @@ public class ButterChurnBlockEntity extends BlockEntity {
 
     public void reset() {
         hasMilk = false;
+        inputItem = Items.AIR; // Reset input item
         churnProgress = 0;
 
         if (world != null) {

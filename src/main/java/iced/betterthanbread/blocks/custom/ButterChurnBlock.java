@@ -18,6 +18,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import iced.betterthanbread.BetterThanBread;
 
 public class ButterChurnBlock extends Block implements BlockEntityProvider {
 
@@ -37,23 +38,37 @@ public class ButterChurnBlock extends Block implements BlockEntityProvider {
 
         ItemStack held = player.getStackInHand(hand);
 
-        if (held.isOf(Items.MILK_BUCKET) && !be.hasMilk()) {
-            be.insertMilk();
-            if (!player.isCreative()) {
-                player.setStackInHand(hand, new ItemStack(Items.BUCKET));
+        // Get recipe manager and find matching recipe
+        var recipeManager = world.getRecipeManager();
+        var recipes = recipeManager.listAllOfType(BetterThanBread.BUTTER_CHURN);
+
+        // Check if held item matches any recipe input
+        for (var recipe : recipes) {
+            if (recipe.getInput().test(held)) {
+                if (!be.hasInput()) {
+                    be.insertInput(held.getItem());
+                    if (!player.isCreative()) {
+                        held.decrement(1);
+                    }
+                    return ActionResult.CONSUME;
+                }
             }
-            return ActionResult.CONSUME;
         }
 
-        if (held.isOf(Items.STICK) && be.hasMilk()) {
+        if (held.isOf(Items.STICK) && be.hasInput()) {
             be.churn();
             return ActionResult.CONSUME;
         }
 
         if (held.isEmpty() && be.isReady()) {
-            player.giveItemStack(new ItemStack(ModItems.BUTTER));
-            be.reset();
-            return ActionResult.PASS;
+            // Get the output from the recipe
+            for (var recipe : recipes) {
+                if (recipe.getInput().test(new ItemStack(be.getInputItem()))) {
+                    player.giveItemStack(recipe.getOutput().copy());
+                    be.reset();
+                    return ActionResult.SUCCESS;
+                }
+            }
         }
 
         return ActionResult.PASS;

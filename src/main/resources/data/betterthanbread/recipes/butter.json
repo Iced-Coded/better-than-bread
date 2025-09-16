@@ -1,0 +1,9 @@
+{
+  "type": "betterthanbread:butter_churn",
+  "input": {
+    "item": "minecraft:milk_bucket"
+  },
+  "output": {
+    "item": "betterthanbread:butter"
+  }
+}
