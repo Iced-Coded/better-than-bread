@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PBP",
+    "NCO",
+    "   "
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:potato"
+    },
+    "P": {
+      "item": "minecraft:cooked_porkchop"
+    },
+    "C": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "N": {
+      "item": "farmersdelight:onion"
+    },
+    "B": {
+      "item": "betterthanbread:butter"
+    }
+  },
+  "result": {
+    "item": "betterthanbread:pork_pie",
+    "count": 1
+  }
+}

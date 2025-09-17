@@ -6,6 +6,7 @@ import iced.betterthanbread.items.ModItems;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import io.wispforest.owo.registration.reflect.BlockRegistryContainer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -45,5 +46,7 @@ public class ModBlocks {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "butter_churn"), BUTTER_CHURN_ITEM);
         Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pork_pie"), PORK_PIE);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pork_pie"), PORK_PIE_ITEM);
+
+        CompostingChanceRegistry.INSTANCE.add(PORK_PIE_ITEM, 1.0f);
     }
 }

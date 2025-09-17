@@ -7,11 +7,11 @@
   ],
   "key": {
     "I": {
-      "tag": "minecraft:iron_ingot"
+      "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "id": "betterthanbread:blade",
+    "item": "betterthanbread:blade",
     "count": 1
   }
 }
