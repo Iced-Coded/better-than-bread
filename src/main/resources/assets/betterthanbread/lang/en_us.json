@@ -20,6 +20,8 @@
   "item.betterthanbread.butter": "Butter",
   "item.betterthanbread.croissant": "Croissant",
   "item.betterthanbread.raw_croissant": "Raw Croissant",
+  "item.betterthanbread.raw_pain_au_chocolat": "Raw Pain au Chocolat",
+  "item.betterthanbread.pain_au_chocolat": "Pain au Chocolat",
 
   "itemGroup.betterthanbread.betterthanbread": "Better than Bread"
 }
