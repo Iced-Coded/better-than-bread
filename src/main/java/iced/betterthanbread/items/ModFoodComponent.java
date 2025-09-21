@@ -60,4 +60,16 @@ public class ModFoodComponent {
             .hunger(5)
             .saturationModifier(0.5f)
             .build();
+
+    public static FoodComponent RAW_PAIN_AU_CHOCOLAT = new FoodComponent.Builder()
+            .hunger(1)
+            .saturationModifier(0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600), 1)
+            .alwaysEdible()
+            .build();
+
+    public static FoodComponent PAIN_AU_CHOCOLAT = new FoodComponent.Builder()
+            .hunger(1)
+            .saturationModifier(0.5f)
+            .build();
 }

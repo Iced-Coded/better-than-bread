@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "betterthanbread:item/raw_pain_au_chocolat"
+  }
+}

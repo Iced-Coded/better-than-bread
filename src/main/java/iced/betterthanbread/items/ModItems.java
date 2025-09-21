@@ -51,6 +51,8 @@ public class ModItems {
 
     public static final Item RAW_CROISSANT = foodItem("raw_croissant", ModFoodComponent.RAW_CROISSANT, 0.25f);
     public static final Item CROISSANT = foodItem("croissant", ModFoodComponent.CROISSANT, 0.4f);
+    public static final Item RAW_PAIN_AU_CHOCOLAT = foodItem("raw_pain_au_chocolat", ModFoodComponent.RAW_PAIN_AU_CHOCOLAT, 0.25f);
+    public static final Item PAIN_AU_CHOCOLAT = foodItem("pain_au_chocolat", ModFoodComponent.PAIN_AU_CHOCOLAT, 0.4f);
 
     public static final Item BUTTER = foodItem("butter", ModFoodComponent.BUTTER, 0.1f);
 
