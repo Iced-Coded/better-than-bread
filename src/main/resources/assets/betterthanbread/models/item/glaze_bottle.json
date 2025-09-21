@@ -1,0 +1,16 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "betterthanbread:item/glaze_bottle"
+  },
+  "overrides": [
+    {
+      "predicate": { "damage": 0.33 },
+      "model": "betterthanbread:item/glaze_bottle_1"
+    },
+    {
+      "predicate": { "damage": 0.66 },
+      "model": "betterthanbread:item/glaze_bottle_2"
+    }
+  ]
+}
