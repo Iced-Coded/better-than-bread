@@ -1,6 +1,7 @@
 package iced.betterthanbread.items;
 import iced.betterthanbread.BetterThanBread;
 
+import iced.betterthanbread.items.custom.GlazeBottleItem;
 import iced.betterthanbread.items.custom.RollingPinItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
@@ -39,6 +40,13 @@ public class ModItems {
                     .group(ModItems.GROUP)
                     .maxCount(1)
                     .maxDamage(64)
+            ));
+
+    public static final Item GLAZE_BOTTLE = registerItem("glaze_bottle",
+            new GlazeBottleItem(new OwoItemSettings()
+                    .group(ModItems.GROUP)
+                    .maxCount(1)
+                    .maxDamage(3)
             ));
 
     public static final Item RAW_CROISSANT = foodItem("raw_croissant", ModFoodComponent.RAW_CROISSANT, 0.25f);
