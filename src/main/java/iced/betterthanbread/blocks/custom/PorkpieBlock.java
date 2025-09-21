@@ -1,4 +1,4 @@
-package iced.betterthanbread.blocks;
+package iced.betterthanbread.blocks.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
