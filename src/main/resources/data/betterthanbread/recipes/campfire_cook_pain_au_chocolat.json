@@ -1,0 +1,9 @@
+{
+  "type": "campfire_cooking",
+  "ingredient": {
+    "item": "betterthanbread:raw_pain_au_chocolat"
+  },
+  "result": "betterthanbread:pain_au_chocolat",
+  "experience": 5,
+  "cookingtime": 300
+}

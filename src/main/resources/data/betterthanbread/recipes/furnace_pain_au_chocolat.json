@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "betterthanbread:raw_pain_au_chocolat"
+  },
+  "result": "betterthanbread:pain_au_chocolat",
+  "experience": 5,
+  "cookingTime": 200
+}

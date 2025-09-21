@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "farmersdelight:wheat_dough"
+    },
+    {
+      "item": "betterthanbread:butter"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "betterthanbread:rolling_pin"
+
+    }
+  ],
+  "result": {
+    "item": "betterthanbread:raw_pain_au_chocolat",
+    "count": 3
+  }
+}
