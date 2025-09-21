@@ -2,9 +2,6 @@ package iced.betterthanbread.items.custom;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
-
-import java.util.Random;
 
 public class RollingPinItem extends Item {
     public RollingPinItem(Settings settings) {
@@ -21,5 +18,10 @@ public class RollingPinItem extends Item {
             return ItemStack.EMPTY;
         }
         return copy;
+    }
+
+    @Override
+    public boolean hasRecipeRemainder() {
+        return true;
     }
 }
