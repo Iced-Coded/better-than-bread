@@ -60,4 +60,9 @@ public class GlazeBottleItem extends Item {
     public boolean hasRecipeRemainder() {
         return true;
     }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return false;
+    }
 }
