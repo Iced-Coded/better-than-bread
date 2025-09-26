@@ -50,9 +50,6 @@ public class ButterChurnRenderer implements BlockEntityRenderer<ButterChurnBlock
             if (stream != null) {
                 stream.close();
                 var i = 0;
-                if (i == 1) {
-
-                }
                 return new Identifier("betterthanbread", "textures/entity/butter_churn.png");
             } else {
                 System.out.println("Texture NOT found in resources");
