@@ -7,7 +7,8 @@
 ![Modrinth Version](https://img.shields.io/modrinth/v/FnFCgIUY?style=for-the-badge)
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/FnFCgIUY?style=for-the-badge)\
 [![Static Badge](https://img.shields.io/badge/Modrinth-download-green?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/better-than-bread)
-[![Static Badge](https://img.shields.io/badge/Curseforge-download-orange?style=for-the-badge&logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/better-than-bread)
+[![Static Badge](https://img.shields.io/badge/Curseforge-download-orange?style=for-the-badge&logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/better-than-bread)\
+[![CodeFactor](https://www.codefactor.io/repository/github/iced-coded/better-than-bread/badge)](https://www.codefactor.io/repository/github/iced-coded/better-than-bread)
 
 
 Better than Bread is an add-on for [Farmer's Delight](https://github.com/MehVahdJukaar/FarmersDelightRefabricated), which adds finger food pastries from all-around the world!
